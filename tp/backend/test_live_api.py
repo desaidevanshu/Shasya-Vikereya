@@ -4,7 +4,7 @@ import ssl
 import urllib.parse
 from typing import Optional, List, Dict, Any
 
-API_KEY = "579b464db66ec23bdd0000010f543d2c735c4ea46fec9e652eb73902"
+API_KEY = "YOUR_AGMARKNET_API_KEY"
 RESOURCE_ID = "9ef84268-d588-465a-a308-a864a43d0070"
 BASE_URL = f"https://api.data.gov.in/resource/{RESOURCE_ID}"
 
