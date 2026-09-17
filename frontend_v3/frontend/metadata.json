@@ -1,0 +1,6 @@
+{
+  "name": "KrishiClear - Algorithmic Agritech Market Clearance",
+  "description": "High-frequency algorithmic market-clearing and aerospace-grade telemetry platform connecting FPOs, farmers, and institutional buyers with instant UPI settlement.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

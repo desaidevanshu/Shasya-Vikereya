@@ -1,0 +1,24 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /userProfiles/{userId} {
+      allow read: if request.auth != null && request.auth.uid == userId;
+      allow create: if request.auth != null
+        && request.auth.uid == userId
+        && request.resource.data.role in ['farmer', 'fpo', 'buyer', 'transporter', 'consumer', 'platform'];
+      allow update: if request.auth != null
+        && request.auth.uid == userId
+        && request.resource.data.role == resource.data.role;
+      allow delete: if false;
+    }
+
+    match /marketplace_orders/{orderId} {
+      allow read: if request.auth != null;
+      allow create: if request.auth != null
+        && request.resource.data.buyer_uid == request.auth.uid;
+      allow update: if request.auth != null;
+      allow delete: if false;
+    }
+  }
+}

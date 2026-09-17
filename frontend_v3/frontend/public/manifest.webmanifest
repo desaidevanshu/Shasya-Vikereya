@@ -1,0 +1,16 @@
+{
+  "name": "Shasya Vikreya Direct Marketplace",
+  "short_name": "Shasya Vikreya",
+  "description": "Direct farm-to-buyer clearing, intelligent logistics, and fairer realization.",
+  "start_url": "/",
+  "id": "/shasya-vikreya",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone"],
+  "background_color": "#f7faf8",
+  "theme_color": "#0f766e",
+  "orientation": "portrait-primary",
+  "icons": [
+    { "src": "/just%20logo.svg", "sizes": "192x192", "type": "image/svg+xml", "purpose": "any maskable" },
+    { "src": "/logo%20with%20name.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
