@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "krishiclear-engine": {
+      "command": "python",
+      "args": [
+        "c:/SIH_26033_V2/backend/mcp_server.py"
+      ],
+      "env": {
+        "PYTHONUNBUFFERED": "1"
+      }
+    }
+  }
+}

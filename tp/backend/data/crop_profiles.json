@@ -1,0 +1,74 @@
+{
+  "tomato": {
+    "name": "Tomato (Hybrid / Desi)",
+    "category": "Perishable Fruit Vegetable",
+    "ideal_temp_min_c": 12.0,
+    "ideal_temp_max_c": 15.0,
+    "max_ambient_limit_c": 35.0,
+    "ideal_humidity_percent": 85,
+    "base_shelf_life_hours": 120,
+    "temp_decay_multiplier": 0.08,
+    "handling_sensitivity": "High",
+    "typical_crate_weight_kg": 25,
+    "mandi_benchmark_code": "TOM-MH-01",
+    "standard_grade_specs": {
+      "Grade_A": "Uniform red, firm skin, diameter 55-65mm, zero blemish",
+      "Grade_B": "Slight size variance, light green shoulder, table grade",
+      "Grade_C": "Overripe or minor skin cuts, processing / sauce grade"
+    }
+  },
+  "onion": {
+    "name": "Nashik Red Onion (Garwa / Pol)",
+    "category": "Semi-Perishable Bulb",
+    "ideal_temp_min_c": 20.0,
+    "ideal_temp_max_c": 25.0,
+    "max_ambient_limit_c": 38.0,
+    "ideal_humidity_percent": 65,
+    "base_shelf_life_hours": 720,
+    "temp_decay_multiplier": 0.015,
+    "handling_sensitivity": "Low",
+    "typical_crate_weight_kg": 50,
+    "mandi_benchmark_code": "ONI-MH-LASALGAON",
+    "standard_grade_specs": {
+      "Grade_A": "Dry skin, 45-60mm diameter, tight neck, export quality",
+      "Grade_B": "35-45mm medium bulb, local domestic consumption",
+      "Grade_C": "Under 35mm / golta, dehydration / pickle use"
+    }
+  },
+  "potato": {
+    "name": "Potato (Jyoti / Pukhraj)",
+    "category": "Tuber Vegetable",
+    "ideal_temp_min_c": 10.0,
+    "ideal_temp_max_c": 15.0,
+    "max_ambient_limit_c": 32.0,
+    "ideal_humidity_percent": 90,
+    "base_shelf_life_hours": 960,
+    "temp_decay_multiplier": 0.02,
+    "handling_sensitivity": "Medium",
+    "typical_crate_weight_kg": 50,
+    "mandi_benchmark_code": "POT-MH-PUNE",
+    "standard_grade_specs": {
+      "Grade_A": "Firm skin, oval shape, zero greening, >50mm",
+      "Grade_B": "40-50mm, minor surface roughness, household grade",
+      "Grade_C": "Small baby potatoes, canning / seed grade"
+    }
+  },
+  "spinach": {
+    "name": "Leafy Green Spinach (Palak)",
+    "category": "High Perishable Leafy",
+    "ideal_temp_min_c": 2.0,
+    "ideal_temp_max_c": 5.0,
+    "max_ambient_limit_c": 28.0,
+    "ideal_humidity_percent": 95,
+    "base_shelf_life_hours": 36,
+    "temp_decay_multiplier": 0.22,
+    "handling_sensitivity": "Extremely High",
+    "typical_crate_weight_kg": 10,
+    "mandi_benchmark_code": "SPN-MH-JUNNAR",
+    "standard_grade_specs": {
+      "Grade_A": "Crisp dark green leaves, tender stems, morning harvest",
+      "Grade_B": "Minor yellow edges, sorted for cooking",
+      "Grade_C": "Wilted leaves, quick juice / processing extraction"
+    }
+  }
+}

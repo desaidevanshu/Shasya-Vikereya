@@ -1,0 +1,207 @@
+SIH 2026 | PS 26033 | KrishiClear — Team Additions
+Addendum Page 1
+KrishiClear — Team Additions Addendum
+PS 26033 | Additive update to the existing competitive feature
+document
+Important: The original KrishiClear document is not being replaced or re-written. These pages only add the
+team-suggested ideas, merge overlaps with the existing architecture, and rank them by impact × uniqueness ×
+hackathon feasibility.
+Keep unchanged
+All earlier KrishiClear sections, competitive analysis, clearing-batch concept, price
+corridor, I100 ledger, automatic re-clearing, farmer guardrails, architecture, MVP and
+demo story.
+Newly integrated
+Freshness limit, commodity temperature profiles, route fuel economics, profit-maximizing
+routing, what-if simulation, additional simulation engines, APMC/legal compliance layer,
+AI forecasting sharpening, FPO analytics dashboard, multilingual UX.
+Priority rule
+Build only the P0 items deeply. P1 items should be working but simple. P2 items are
+demo/wow extensions only if time remains.
+The uploaded team document already emphasizes net-earning calculation, AI price/demand prediction, smart
+aggregation, logistics/route planning, voice/low-data access, and a clear priority/demo order. The additions below
+strengthen those same components rather than creating a second unrelated product.
+
+--- PAGE BREAK ---
+SIH 2026 | PS 26033 | KrishiClear — Team Additions
+Addendum Page 2
+1. P0 — The Four Highest-Value Additions
+These are the additions most worth building because they directly reinforce KrishiClear’s central differentiator:
+clearing a trade while respecting economics, time, quality and logistics together.
+1.1 Freshness Limit / Remaining Freshness Engine
+What it does: Every Clearing Batch gets a freshness window. The system estimates how much usable selling time
+remains before quality risk becomes material.
+MVP: Maintain a commodity profile containing expected shelf-life, handling sensitivity and an acceptable temperature
+band. Track harvest time → pickup → consolidation → transit → delivery. Output Freshness Remaining % and a
+simple risk label: Safe / Watch / Critical.
+Why it is different: Route optimization is no longer only about distance. The optimizer is solving for value before
+spoilage.
+1.2 Commodity-Specific Temperature Intelligence
+Do not use one universal 'best temperature for vegetables'. Store a crop/commodity profile with its recommended
+temperature range, humidity sensitivity and temperature-exposure tolerance. The engine then compares the
+actual/assumed transit profile against that range.
+Demo: Select Tomato → show its target band → increase route temperature → freshness score falls → expected
+realization falls → engine proposes an alternate route/vehicle.
+1.3 Route Cost + Profit Maximization
+Extend the existing route planner so that it calculates delivered economics, not merely shortest distance.
+Cost inputs: distance, vehicle mileage, petrol/diesel cost, tolls, driver cost, loading/unloading, cold-chain/refrigeration
+cost where applicable, and vehicle capacity.
+Optimization objective: maximize farmer net realization subject to buyer deadline, vehicle capacity, route time and
+freshness constraints. This plugs directly into the existing Net-Earning Calculator and Clearing Batch.
+1.4 What-If Simulation Engine
+Add a small simulation panel: “What happens if conditions change?” The user can change traffic, temperature,
+delay, fuel cost or vehicle availability and immediately see the effect on delivery time, freshness, logistics cost and
+farmer net earning.
+Hackathon MVP: rule-based sensitivity calculations are sufficient. The important part is that the system shows a
+before/after decision and explains why the clearing should change.
+
+--- PAGE BREAK ---
+SIH 2026 | PS 26033 | KrishiClear — Team Additions
+Addendum Page 3
+2. P1 — Operational Intelligence & Compliance
+These features should be implemented in a lightweight but credible way. They add institutional realism without
+distracting from the core clearing engine.
+2.1 APMC / Mandi Legal Compliance Layer
+For the Maharashtra pilot, the product should treat APMC compliance as a decision/guardrail layer, not as
+hard-coded legal advice. Maharashtra's current framework contains provisions covering direct marketing, private
+markets, farmer-consumer markets, electronic trading platforms, licences and dispute/payment mechanisms.
+IciteIturn0search0Iturn0search2I
+Feature: Before a trade is confirmed, show: Origin state → Destination state → Commodity → Transaction mode →
+Applicable compliance path → Required licence/partner status → Fee/tax/legal-review flag.
+Important: Because APMC rules and permissions are state-specific, the production version should use a configurable
+rules table and human/legal review for ambiguous cases. Maharashtra's official FAQ also distinguishes regulated
+market purchases from permitted direct-marketing/private-market channels and licensing requirements.
+IciteIturn0search1Iturn0search3I
+2.2 AI Demand + Price Forecasting — Sharpened
+Keep the existing AI forecasting feature, but make it decision-oriented. Forecast demand/price by commodity ×
+region × date window, then feed the output into the Clearing Batch.
+Output: expected demand range, confidence, top drivers, and recommended sell window. Example: “Demand likely
+HIGH in Pune in 2–4 days; current route economics support clearing now.”
+Data: historical prices/arrivals, seasonality, orders, current marketplace demand and—when available—weather
+signals. For the hackathon, a simple time-series/regression model is enough; the competitive value comes from
+connecting the forecast to an executable clearing decision.
+2.3 FPO Command Center
+A dedicated FPO dashboard should aggregate what individual farmer screens cannot show.
+Show: total orders, fulfilled quantity, farmer earnings, average realization/kg, logistics cost/kg,
+rejection/spoilage rate, average buyer price, pending payments, top commodities, top buyer clusters, and
+month-on-month trend.
+Unique extension: add a “Money recovered by optimization” card — estimated additional farmer realization
+generated by aggregation + route optimization + reduced spoilage compared with the baseline.
+2.4 Multilingual + Voice Continuation
+The team document already proposes voice listing and low-data/SMS access. Extend this to the complete farmer
+decision flow: listing, price explanation, buyer offer, route recommendation, confirmation and alerts.
+Priority languages for the demo: English + Hindi + Marathi. Architect strings separately so more languages can be
+added later.
+
+--- PAGE BREAK ---
+SIH 2026 | PS 26033 | KrishiClear — Team Additions
+Addendum Page 4
+3. Simulation Engine Roadmap — The 'Digital Twin Lite'
+Do not build five unrelated AI models. Build one reusable simulation framework with multiple scenario modules. This
+makes the feature look advanced while remaining achievable.
+Simulation
+Input changed
+What changes
+Decision produced
+Traffic Shock
+Traffic +20/40/60%
+ETA, fuel cost, freshness
+Reroute / re-clear / vehicle swap
+Temperature Shock
+Transit temperature
+above target
+Freshness score, spoilage risk
+Cold-chain route / faster route
+Fuel Price Shock
+Petrol/diesel I/L
+Route cost, farmer net
+Best economic route
+Delay Shock
+Pickup/handling delay
+Remaining freshness
+Change allocation / priority
+Supplier Dropout
+Farmer unavailable
+Fulfilment gap
+Automatic re-clearing
+Demand Shock
+Buyer demand ±%
+Clearing quantity / price
+Re-pool supply/demand
+### The strongest demo sequence
+1) Create a Clearing Batch → 2) show best route and farmer net earning → 3) turn traffic up → 4) show freshness/cost
+impact → 5) engine proposes a different route → 6) show the revised clearing and explain the I impact.
+This is a stronger 'wow' moment than simply showing a forecast chart because the prediction changes an actual
+trade decision.
+3.1 Reusable Simulation Architecture
+Use one scenario object: baseline state + changed variables + constraints + recalculation + comparison. Keep
+the engine deterministic for the demo. Later, it can be connected to live traffic, weather and fuel-price feeds.
+
+--- PAGE BREAK ---
+SIH 2026 | PS 26033 | KrishiClear — Team Additions
+Addendum Page 5
+4. Final Priority Stack + 1% WOW Factor
+The goal is not to add every possible feature. The goal is to make the existing KrishiClear concept visibly harder to
+copy while remaining buildable.
+Priority
+Feature
+Build depth
+Reason
+P0
+Freshness + commodity temperature
+profile
+Working
+Adds perishability intelligence to
+clearing
+P0
+Route fuel economics + profit optimizer
+Working
+Turns routing into farmer-profit
+optimization
+P0
+What-if simulation engine
+Working with synthetic
+scenarios
+Best visual judge moment
+P1
+APMC/legal compliance guardrail
+Rules + flags
+Institutional credibility
+P1
+FPO Command Center
+Working analytics
+Shows scale beyond one farmer
+P1
+AI demand/price forecasting
+Simple explainable
+model
+Supports sell-window decisions
+P1
+Multilingual + voice
+3 languages
+Real rural usability
+P2
+Extra simulation modules
+Demo only
+Wow without core-risk
+4.1 The 1% WOW Feature — “Counterfactual Profit Proof”
+After KrishiClear clears a batch, show a small comparison card: “What would likely happen under the next-best
+alternative?”
+KrishiClear: Farmer realization IX | Logistics IY | Freshness risk LOW | Delivery 16:20
+Alternative: Estimated farmer realization IX−I∆ | Logistics IY+I∆ | Freshness risk MEDIUM | Delivery 18:05
+Then state the reason in one sentence: “This clearing was selected because it preserves I∆ farmer realization
+while staying inside the freshness and buyer-deadline constraints.”
+This is not another marketplace feature. It is an auditable proof of why the engine made the decision.
+4.2 Other additions worth considering later
+• Quality Evidence Passport: harvest time, lot weight, grade, temperature exposure and inspection events travel with
+the lot.
+• Spillage/Waste Rescue Mode: if freshness risk becomes critical, automatically search for a closer buyer/processor
+instead of letting the batch fail.
+• Impact Ledger: farmer I gained, kilometres avoided, spoilage avoided and buyer price reduction compared with
+baseline.
+• Auto-Reclear Trigger: a supplier, route or buyer change automatically re-solves only the affected Clearing Batch.
+• Explainability trace: every major clearing decision records the top constraints and economic reasons.
+Final recommendation
+Do not add more dashboards just for quantity. Add intelligence where one variable changes another: temperature
+→ freshness → route → cost → farmer profit → clearing decision. That chain is the real differentiator.
+
+--- PAGE BREAK ---
