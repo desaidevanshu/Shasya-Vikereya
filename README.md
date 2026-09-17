@@ -1,4 +1,4 @@
-# 🌾 Shasya Vikereya v3.0 — Autonomous Agricultural Clearinghouse & Logistics Telemetry Engine
+# 🌾 Shasya Vikereya v3.0 - Autonomous Agricultural Clearinghouse & Logistics Telemetry Engine
 
 > *"Today's Harvest, A Better Tomorrow"*
 > 
