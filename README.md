@@ -1,5 +1,7 @@
-# 🌾 KrishiClear v2.5 — Autonomous Agricultural Clearinghouse & Logistics Telemetry Engine
+# 🌾 Shasya Vikereya v3.0 — Autonomous Agricultural Clearinghouse & Logistics Telemetry Engine
 
+> *"Today's Harvest, A Better Tomorrow"*
+> 
 > *Ministry of Consumer Affairs, Food & Public Distribution (DoCA)*  
 > *"Multiple intermediaries reduce farmers' earnings and increase consumer prices."*
 
@@ -11,7 +13,7 @@
 
 Traditional agricultural apps focus only on bilateral bulletin boards (connecting a farmer to a buyer). This fundamentally fails perishable horticulture because it ignores transport economics, road bruising, auction closing deadlines, and quality disputes.
 
-**KrishiClear** operates as an algorithmic clearinghouse that coordinates:
+**Shasya Vikereya** operates as an algorithmic clearinghouse that coordinates:
 1. **Delivered vehicle economics** (diesel, tolls, driver compensation).
 2. **Perishable biological kinetics** ($Q_{10}$ temperature decay curves & road vibration bruising).
 3. **Statutory Maharashtra APMC compliance** (Section 5D Direct Marketing exemption & Rule 21(A) market cess waiver).
@@ -52,7 +54,7 @@ Traditional agricultural apps focus only on bilateral bulletin boards (connectin
 
 ## 🗺️ GIS Smart Routing & Delivered Profit Maximization Engine
 
-Distance minimization alone is flawed for perishable cargo. KrishiClear compares three concrete freight corridors between Nashik and Mumbai:
+Distance minimization alone is flawed for perishable cargo. Shasya Vikereya compares three concrete freight corridors between Nashik and Mumbai:
 
 | Corridor | Distance | Time | Fuel + Toll | Road Quality & Bruising | Farmer Net Payout |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -77,7 +79,7 @@ Built on the statutory foundation of the **Maharashtra Agricultural Produce Mark
 
 ## 🤖 Model Context Protocol (MCP) Server
 
-Adheres strictly to Anthropic JSON-RPC 2.0 specifications (`backend/mcp_server.py` & `.agents/mcp_config.json`):
+Adheres strictly to Anthropic JSON-RPC 2.0 specifications:
 - `get_live_mandi_rates`: Fetches live Agmarknet prices across 13,629 APMCs.
 - `calculate_clearing_corridor`: Dynamic statutory price corridor calculation.
 - `optimize_logistics_route`: Profit-maximizing route evaluation with thermal decay.
@@ -98,7 +100,7 @@ Adheres strictly to Anthropic JSON-RPC 2.0 specifications (`backend/mcp_server.p
 ## 💻 Tech Stack & Architecture
 
 - **Backend:** Python 3.10+, FastAPI, Uvicorn, Pydantic, PuLP (Simplex LP Clearing Solver), NumPy.
-- **Frontend:** React 19, TypeScript, Vite, Vanilla CSS Design System (Obsidian Slate & Precision Titanium, zero neon slop), Lucide React, Leaflet GIS.
+- **Frontend:** React 19, TypeScript, Vite, Vanilla CSS Design System, Lucide React, Leaflet GIS.
 - **Data Feeds:** Open Government Data (data.gov.in) Resource `9ef84268-d588-465a-a308-a864a43d0070`.
 - **Standards:** MCP JSON-RPC 2.0, SHA-256 Cryptographic Hashing.
 
@@ -108,20 +110,20 @@ Adheres strictly to Anthropic JSON-RPC 2.0 specifications (`backend/mcp_server.p
 
 ### 1. Clone & Setup
 ```bash
-git clone https://github.com/Arhaan1609/tp.git
-cd tp
+git clone https://github.com/desaidevanshu/Shasya-Vikereya.git
+cd Shasya-Vikereya
 ```
 
 ### 2. Backend Setup
 ```bash
-cd backend
+cd tp/backend
 python -m venv venv
 # Windows:
 venv\Scripts\activate
 # Linux/macOS:
 source venv/bin/activate
 
-pip install fastapi uvicorn pydantic requests pulp numpy
+pip install -r requirements.txt
 python -m uvicorn main:app --host 127.0.0.1 --port 8000 --reload
 ```
 * Backend API: `http://127.0.0.1:8000`
@@ -129,7 +131,7 @@ python -m uvicorn main:app --host 127.0.0.1 --port 8000 --reload
 
 ### 3. Frontend Setup
 ```bash
-cd ../frontend
+cd ../../frontend_v3/frontend
 npm install
 npm run dev
 ```
