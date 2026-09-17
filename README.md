@@ -1,4 +1,4 @@
-# 🌾 Shasya Vikereya v3.0 - Autonomous Agricultural Clearinghouse & Logistics Telemetry Engine
+# 🌾 Shasya Vikreya v3.0 - Autonomous Agricultural Clearinghouse & Logistics Telemetry Engine
 
 > *"Today's Harvest, A Better Tomorrow"*
 > 
@@ -13,7 +13,7 @@
 
 Traditional agricultural apps focus only on bilateral bulletin boards (connecting a farmer to a buyer). This fundamentally fails perishable horticulture because it ignores transport economics, road bruising, auction closing deadlines, and quality disputes.
 
-**Shasya Vikereya** operates as an algorithmic clearinghouse that coordinates:
+**Shasya Vikreya** operates as an algorithmic clearinghouse that coordinates:
 1. **Delivered vehicle economics** (diesel, tolls, driver compensation).
 2. **Perishable biological kinetics** ($Q_{10}$ temperature decay curves & road vibration bruising).
 3. **Statutory Maharashtra APMC compliance** (Section 5D Direct Marketing exemption & Rule 21(A) market cess waiver).
